@@ -8,7 +8,7 @@ import {ReactiveFormsModule} from '@angular/forms'; // Para Validação de formu
 @NgModule({
   declarations: [
     AppComponent,
-    FormvalidationComponent,    
+    FormvalidationComponent,// Quando o componente é gerado ele realiza o autoImport     
   ],
   imports: [
     BrowserModule,
