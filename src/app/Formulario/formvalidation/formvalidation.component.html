@@ -1,0 +1,29 @@
+<form [formGroup]="validatioForm" class="form mt-4">
+
+  <div class="form-group">
+      <input formControlName="userName" class="form-control" placeholder="user name" autofocus>
+      <small
+        *ngIf="validatioForm.get('userName').errors?.required"
+        class="text-danger d-block mt-2">
+        Usúario Obrigatório!
+      </small>
+
+      <small
+        *ngIf="validatioForm.get('userName').valid"
+        class="text-success d-block mt-2">
+        Valeu Mario OK!
+      </small>
+  </div>
+
+  <div class="form-group">
+      <input formControlName="password" type="password" class="form-control" placeholder="password">
+      <small
+        *ngIf="validatioForm.get('password').errors?.required"
+        class="text-danger d-block mt-2">
+        Senha Obrigatório!
+      </small>
+
+  </div>
+
+  <button [disabled]="validatioForm.invalid" type="submit" class="btn btn-primary btn-block">login</button>
+</form>
